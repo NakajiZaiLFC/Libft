@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 05:40:07 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 03:49:01 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 04:37:19 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	len_dst = 0;
 	len_src = 0;
-	if(dst)
+	if (dst)
 		len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
 	if (dstsize <= len_dst)

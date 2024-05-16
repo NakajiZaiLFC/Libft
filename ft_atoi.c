@@ -6,11 +6,13 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 03:03:27 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 04:02:45 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 04:38:18 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
+
 static long	handle_overflow(const char *str, int sign);
 
 int	ft_space(char c)
@@ -24,7 +26,7 @@ int	ft_atoi(const char *str)
 {
 	int				sign;
 	unsigned int	n;
-long result;
+	long			result;
 
 	while (ft_space(*str))
 		str++;
@@ -32,15 +34,12 @@ long result;
 		sign = -1;
 	else
 		sign = 1;
-
 	if (*str == '-' || *str == '+')
 		str++;
-		n = 0;
-result = (int)handle_overflow(str, sign);
+	n = 0;
+	result = (int)handle_overflow(str, sign);
 	return (sign * result);
 }
-
-#include <limits.h>
 
 static long	handle_overflow(const char *str, int sign)
 {

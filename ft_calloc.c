@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 01:04:58 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 04:12:15 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 04:37:19 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count && size > SIZE_MAX / count)
 		return (NULL);
-	ptr = (void*)malloc(count * size);
+	ptr = (void *)malloc(count * size);
 	if (ptr == NULL || (count == 0 || size == 0))
 		return (ptr);
 	ft_bzero(ptr, (count * size));
@@ -38,7 +38,6 @@ void	*ft_calloc(size_t count, size_t size)
 // 	ft_bzero(array, (nmemb * size));
 // 	return (array);
 // }
-
 
 // void	ft_bzero(void *s, size_t n)
 // {
