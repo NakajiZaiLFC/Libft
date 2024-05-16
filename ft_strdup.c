@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 03:28:32 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/11 02:02:11 by snakajim         ###   ########.fr       */
+/*   Created: 2024/05/04 11:38:30 by snakajim          #+#    #+#             */
+/*   Updated: 2024/05/11 03:00:46 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *src)
 {
-	size_t	i;
+	char	*dst;
 	size_t	len;
+	size_t	i;
 
-	len = ft_strlen((char *)src);
-	if (dstsize <= 0)
-		return (len);
-	dstsize -= 1;
+	len = ft_strlen(src);
+	dst = malloc(sizeof(char) * (len + 1));
+	if (dst == NULL)
+		return (NULL);
 	i = 0;
-	while (dstsize)
+	while (len > i)
 	{
-		if (src[i] == '\0')
-			break ;
 		dst[i] = src[i];
-		dstsize--;
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return (dst);
 }
 
 // size_t	ft_strlen(const char *s)
@@ -44,4 +43,24 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 		len++;
 // 	}
 // 	return (len);
+// }
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char	*src;
+// 	char	*dst;
+
+// 	src = "";
+// 	dst = ft_strdup(src);
+// 	printf("%s\n", dst);
+// 	dst = strdup(src);
+// 	printf("%s\n", dst);
+// 	src = "Hello World!";
+// 	dst = ft_strdup(src);
+// 	printf("%s\n", dst);
+// 	dst = strdup(src);
+// 	printf("%s\n", dst);
+// 	return (0);
 // }

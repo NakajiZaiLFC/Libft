@@ -6,15 +6,15 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 21:52:33 by snakajim          #+#    #+#             */
-/*   Updated: 2024/04/29 05:35:56 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:06:55 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
 	if (c > 47 && 58 > c)
-	{
 		return (1);
-	}
 	return (0);
 }

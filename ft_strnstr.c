@@ -1,27 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 22:48:35 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/04 02:07:11 by snakajim         ###   ########.fr       */
+/*   Created: 2024/05/01 05:28:05 by snakajim          #+#    #+#             */
+/*   Updated: 2024/05/08 01:46:50 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+// #include <stdio.h>
+// #include <string.h>
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	count;
+	size_t	j;
 
 	i = 0;
-	count = 0;
-	while (count < n)
+	if (needle[0] == '\0')
 	{
-		*((char *)s + count) = i;
-		count++;
+		return ((char *)haystack);
 	}
+	if (len == 0)
+		return (NULL);
+	while (haystack[i] && i < len)
+	{
+		j = 0;
+		while (haystack[i + j] == needle[j] && i + j < len)
+		{
+			if (needle[j + 1] == '\0')
+			{
+				return ((char *)haystack + i);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }

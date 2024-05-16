@@ -6,25 +6,27 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 02:15:59 by snakajim          #+#    #+#             */
-/*   Updated: 2024/04/29 05:35:53 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/08 02:12:51 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	
-	if(src == NULL && dst == NULL )
-		return 0;
+	unsigned char	*d;
+	unsigned char	*s;
+
+	if (src == NULL && dst == NULL)
+		return (0);
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	while(n){
+	while (n)
+	{
 		*d = *s;
-	   	n--;
+		n--;
 		d++;
-		s++;	
+		s++;
 	}
-	return (d);
+	return (dst);
 }

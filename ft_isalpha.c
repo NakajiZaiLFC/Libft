@@ -6,15 +6,15 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 22:28:45 by snakajim          #+#    #+#             */
-/*   Updated: 2024/04/29 00:47:55 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:43:13 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c > 64 && 91 > c) || (c > 96 && 123 > c))
-	{
 		return (1);
-	}
 	return (0);
 }

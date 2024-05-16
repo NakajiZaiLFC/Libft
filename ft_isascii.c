@@ -6,15 +6,15 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:42:19 by snakajim          #+#    #+#             */
-/*   Updated: 2024/04/29 00:47:53 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:07:01 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (c >= 0 && 127 >= c)
-	{
 		return (1);
-	}
 	return (0);
 }
