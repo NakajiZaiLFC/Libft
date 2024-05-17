@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:30:06 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/11 00:48:46 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:26:20 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,10 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd(n % 10 + '0', fd);
 }
+
+// int main(void)
+// {
+// 	int n = 42;
+// 	ft_putnbr_fd(n, 1);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:55:47 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/07 23:23:54 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:27:21 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,16 @@ void	*ft_memset(void *b, int c, size_t n)
 	count = 0;
 	while (count < n)
 	{
-		*((char *)b + count) = c;
+		((char *)b)[count] = c;
 		count++;
 	}
 	return (b);
 }
+
+// int	main(void)
+// {
+// 	char	str[50] = "Hello, World!";
+// 	ft_memset(str, 'a', 13);
+// 	printf("%s\n", str);
+// 	return (0);
+// }

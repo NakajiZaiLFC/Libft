@@ -6,14 +6,11 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 05:28:05 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 01:46:50 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 06:12:10 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdio.h>
-// #include <string.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

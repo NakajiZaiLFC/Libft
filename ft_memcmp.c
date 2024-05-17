@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 04:21:37 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/07 23:23:38 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 00:22:51 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*p1 = s1;
-	const unsigned char	*p2 = s2;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
 	while (n > 0)
 	{
 		if (*p1 != *p2)

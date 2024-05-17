@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 03:03:27 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 04:38:18 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 22:16:31 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 {
 	int				sign;
 	unsigned int	n;
-	long			result;
+	int				result;
 
 	while (ft_space(*str))
 		str++;

@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 02:15:59 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 02:12:51 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:27:03 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// int main(void)
+// {
+// 	char src[] = "Hello, World!";
+// 	char dst[20];
+// 	ft_memcpy(dst, src, 13);
+// 	printf("%s\n", dst);
+// 	return (0);
+// }

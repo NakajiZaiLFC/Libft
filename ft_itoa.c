@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:25:49 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 01:43:32 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 23:21:55 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_itoa(int n)
 	else
 		is_minus = 0;
 	digit = calc_digit(n);
-	ret = (char *)malloc(sizeof(char) * (digit + is_minus + 1));
+	ret = (char *)malloc(digit + is_minus + 1);
 	if (ret == NULL)
 		return (NULL);
 	return (proc_itoa(is_minus, n, ret, digit));

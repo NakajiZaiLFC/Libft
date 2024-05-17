@@ -6,23 +6,11 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 00:53:56 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/11 01:20:59 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 06:06:49 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	len;
-
-// 	len = 0;
-// 	while (s[len] != '\0')
-// 	{
-// 		len++;
-// 	}
-// 	return (len);
-// }
 
 char	*ft_strrchr(const char *s, int c)
 {

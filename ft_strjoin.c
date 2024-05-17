@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 22:07:41 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/11 02:54:47 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:43:49 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	count = 0;
 	sum = 0;
-	sum = ft_strlen(s1);
-	sum += ft_strlen(s2);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	sum = ft_strlen(s1)+ft_strlen(s2);
 	strlen = (char *)malloc(sum + 1);
 	if (strlen == NULL)
 		return (NULL);
@@ -32,11 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		count++;
 	}
 	while (s2[sum] != '\0')
-	{
-		strlen[count] = s2[sum];
-		count++;
-		sum++;
-	}
+		strlen[count++] = s2[sum++];
 	strlen[count] = '\0';
 	return (strlen);
 }

@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 01:04:58 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 04:37:19 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/17 23:00:52 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,40 +19,12 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count && size > SIZE_MAX / count)
 		return (NULL);
-	ptr = (void *)malloc(count * size);
-	if (ptr == NULL || (count == 0 || size == 0))
-		return (ptr);
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+		return (NULL);
 	ft_bzero(ptr, (count * size));
 	return (ptr);
 }
-
-// void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	void	*array;
-
-// 	if (nmemb && size > SIZE_MAX / nmemb)
-// 		return (NULL);
-// 	array = (void *)malloc(nmemb * size);
-// 	if (array == NULL)
-// 		return (NULL);
-// 	ft_bzero(array, (nmemb * size));
-// 	return (array);
-// }
-
-// void	ft_bzero(void *s, size_t n)
-// {
-// 	size_t	i;
-// 	size_t	count;
-
-// 	i = 0;
-// 	count = 0;
-// 	while (count < n)
-// 	{
-// 		*((char *)s + count) = i;
-// 		count++;
-// 	}
-// 	return (*s);
-// }
 
 // int main(void)
 // {

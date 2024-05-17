@@ -34,28 +34,14 @@ SRCS		=	ft_isalnum.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
-BONUS_SRCS	=	ft_lstnew.c \
-            	ft_lstadd_front.c \
-            	ft_lstsize.c \
-            	ft_lstlast.c \
-            	ft_lstadd_back.c \
-            	ft_lstdelone.c \
-            	ft_lstclear.c \
-            	ft_lstiter.c \
-            	ft_lstmap.c \
-
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 OBJS		=	$(SRCS:.c=.o)
 
-ifeq ($(MAKECMDGOALS), bonus)
-    OBJS += $(BONUS_SRCS:.c=.o)
-endif
-
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			ar rcs $@ $^
+			ar -rcs $@ $^
 
 %.o:		%.c
 			$(CC) $(CFLAGS) -c $< -o $@
@@ -68,6 +54,4 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:		$(NAME)
-
-.PHONY: all clean fclean re bonuss
+.PHONY: all clean fclean re

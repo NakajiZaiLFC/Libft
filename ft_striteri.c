@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:31:57 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 01:46:09 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:27:47 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+// int main(void)
+// {
+// 	char s[] = "Hello, World!";
+// 	ft_striteri(s, ft_putchar_fd);
+// 	return (0);
+// }

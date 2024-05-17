@@ -6,26 +6,11 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 21:03:31 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/11 01:18:49 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 06:02:04 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdio.h>
-// #include <string.h>
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	len;
-
-// 	len = 0;
-// 	while (s[len] != '\0')
-// 	{
-// 		len++;
-// 	}
-// 	return (len);
-// }
 
 char	*ft_strchr(const char *s, int c)
 {

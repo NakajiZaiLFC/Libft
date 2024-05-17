@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:24:35 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 00:52:45 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 06:33:37 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	size_t		i;
 	const char	*start;
 
-	if (!s)
+	if (!s && !c)
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
@@ -93,36 +93,36 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// int main (void)
-// {
-// 	char *str = "Hello World";
-// 	char **ret = ft_split(str, ' ');
-// 	int i = 0;
-// 	while (ret[i] != NULL)
-// 	{
-// 		printf("%s\n", ret[i]);
-// 		i++;
-// 	}
-// 	char *str2 = "Hello World";
-// 	char **ret2 = ft_split(str2, 'o');
-// 	int j = 0;
-// 	while (ret2[j] != NULL)
-// 	{
-// 		printf("%s\n", ret2[j]);
-// 		j++;
-// 	}
+int main (void)
+{
+	char *str = "Hello World";
+	char **ret = ft_split(str, ' ');
+	int i = 0;
+	while (ret[i] != NULL)
+	{
+		printf("%s\n", ret[i]);
+		i++;
+	}
+	char *str2 = "Hello World";
+	char **ret2 = ft_split(str2, 'o');
+	int j = 0;
+	while (ret2[j] != NULL)
+	{
+		printf("%s\n", ret2[j]);
+		j++;
+	}
 
-// 	char *str3 = "Hello World";
-// 	char **ret3 = split(str3, 'l');
-// 	int k = 0;
-// 	while (ret3[k] != NULL)
-// 	{
-// 		printf("%s\n", ret3[k]);
-// 		k++;
-// 	}
-// 	return (0);
-// }
+	char *str3 = "Hello World";
+	char **ret3 = split(str3, 'l');
+	int k = 0;
+	while (ret3[k] != NULL)
+	{
+		printf("%s\n", ret3[k]);
+		k++;
+	}
+	return (0);
+}

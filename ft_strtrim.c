@@ -6,13 +6,13 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 00:51:55 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 01:00:10 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 06:07:44 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_matched(char c, char const *set)
+static int	is_matched(char c, char const *set)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ int	is_matched(char c, char const *set)
 	return (0);
 }
 
-int	process_start(char **s1, char const *set, size_t *len)
+static int	process_start(char **s1, char const *set, size_t *len)
 {
 	while (1)
 	{
@@ -40,7 +40,7 @@ int	process_start(char **s1, char const *set, size_t *len)
 	return (1);
 }
 
-void	process_end(char *s1, char const *set, size_t *len)
+static void	process_end(char *s1, char const *set, size_t *len)
 {
 	while (1)
 	{

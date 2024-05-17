@@ -6,7 +6,7 @@
 /*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 01:29:50 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/08 01:44:24 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/18 05:25:38 by snakajim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+
+// int main(void)
+// {
+// 	char *s = "Hello, World!";
+// 	ft_putendl_fd(s, 1);
+// 	return (0);
+// }
