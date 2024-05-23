@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: snakajim <snakajim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nassy <nassy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 03:03:27 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/17 22:16:31 by snakajim         ###   ########.fr       */
+/*   Updated: 2024/05/24 08:39:30 by nassy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_space(char c)
 int	ft_atoi(const char *str)
 {
 	int				sign;
-	unsigned int	n;
 	int				result;
 
 	while (ft_space(*str))
@@ -36,7 +35,6 @@ int	ft_atoi(const char *str)
 		sign = 1;
 	if (*str == '-' || *str == '+')
 		str++;
-	n = 0;
 	result = (int)handle_overflow(str, sign);
 	return (sign * result);
 }
