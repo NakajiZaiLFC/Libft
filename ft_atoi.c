@@ -6,7 +6,7 @@
 /*   By: nassy <nassy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 03:03:27 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/25 16:44:44 by nassy            ###   ########.fr       */
+/*   Updated: 2024/07/07 01:22:54 by nassy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 {
 	int				sign;
 	int				result;
-	
+
 	while (ft_space(*str))
 		str++;
 	if (*str == '-')

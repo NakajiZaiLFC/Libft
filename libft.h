@@ -6,7 +6,7 @@
 /*   By: nassy <nassy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:55:05 by snakajim          #+#    #+#             */
-/*   Updated: 2024/05/25 15:41:25 by nassy            ###   ########.fr       */
+/*   Updated: 2024/07/07 01:22:11 by nassy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,10 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
+t_list				*ft_lstnew(void *content);
 #endif
